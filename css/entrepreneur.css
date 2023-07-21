@@ -1,0 +1,499 @@
+/*
+
+Ion Template
+http://www.entrepreneur.com/tm-431-ion
+
+COLOR CODES
+  Blue #0db5c0
+  Red #fe475b
+  Light Gray #9b9b9b
+
+TABLE OF CONTENT
+  1. Universal Styles
+  2. Menu Styles
+  3. Home & About Styles
+  4. Products Styles
+  5. Testimonials Styles
+  6. Contact & Footer Styles
+  7. Media Queries
+--------------------------------------*/
+
+/* 1. Universal Styles
+--------------------------------------*/
+* { font-family: 'Open Sans', sans-serif; }
+h1, h2, h3, h4 { text-transform: inherit; }
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+h3 {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+.entrepreneur-black-bg { background-color: #202020; }
+.entrepreneur-blue-text { color: #0db5c0; }
+.entrepreneur-red-text { color: #fe475b; }
+.entrepreneur-light-gray-text { color: #202020; }
+.entrepreneur-light-gray-text-left {
+  color: #202020;
+  align: left;
+}
+.entrepreneur-light-gray-text strong { color: #0DB5C0; }
+.entrepreneur-dark-gray-text { color: #535353; }
+.entrepreneur-gradient-bg {
+  background-image: url('../images/gradient-border-top.png'), url('../images/gradient-border-bottom.png');
+  background-position: center top, center bottom;
+  background-repeat: no-repeat;
+}
+
+.entrepreneur-gradient-bg-top {
+  background-image: url('../images/gradient-border-top.png');
+  background-position: center top, center bottom;
+  background-repeat: no-repeat;
+}
+.entrepreneur-white-bg { background-color: #fff; }
+.entrepreneur-white-bg-extra {
+  background-color: #fff;
+  padding-left: 6.8%;
+  padding-right: 6%;
+}
+.entrepreneur-em { font-style: italic; }
+.entrepreneur-logo-bg {
+  max-width: 390px;
+  width: 100%;
+  height: auto;
+}
+.entrepreneur-products-link .first,
+.entrepreneur-testimonials-header .first {
+  font-weight: 700;
+}
+.entrepreneur-home-right,
+.entrepreneur-about-left,
+.entrepreneur-services {
+  padding: 60px 80px;
+}
+
+/* 2. Menu Styles
+--------------------------------------*/
+.entrepreneur-nav-container {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.entrepreneur-nav-container .container {
+  background-image: url('../images/blue-corner.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: auto 145px;
+}
+.entrepreneur-nav-container.sticky .entrepreneur-white-bg {
+  background-image: none;
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 87%,rgba(255,255,255,0.92) 91%,rgba(229,229,229,0.77) 99%,rgba(229,229,229,0.75) 100%); /* W3C */
+}
+.entrepreneur-nav-container.sticky .entrepreneur-nav { height: 45px; }
+.entrepreneur-nav-container.sticky .entrepreneur-nav { padding: 12px 30px; }
+.entrepreneur-nav-container.sticky .entrepreneur-nav li>a { padding: 5px 15px; }
+.entrepreneur-nav {
+  float: left;
+	height: 145px;
+	margin-bottom: 0;
+  padding-left: 30px;
+	padding-top: 40px;
+}
+.entrepreneur-nav li {
+	display: inline-block;
+	list-style: none;
+}
+.entrepreneur-nav li>a {
+	border-radius: 50px;
+	color: #9b9b9b;
+	padding: 10px 30px;
+	transition: background-color 0.5s ease;
+	-webkit-transition: background-color 0.5s ease;
+}
+#responsive-menu ul li:hover a,
+#responsive-menu ul li.active a,
+.entrepreneur-nav li:hover a,
+.entrepreneur-nav li.active a {
+	background-color: #0db5c0;
+	color: #fff;
+}
+.entrepreneur-nav li:hover a,
+.entrepreneur-nav li.active a,
+a:focus {
+  text-decoration: none;
+}
+#responsive-menu {
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: rgba(180,180,180, 0.4);
+  position: fixed;
+  z-index: 5500;
+  right: -1500px;
+  display: none;
+  overflow: auto;
+}
+#responsive-menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#responsive-menu ul li {
+  display: block;
+  margin-bottom: 2px;
+}
+#responsive-menu ul li a {
+  padding: 12px 18px;
+  background-color: #454545;
+  color: #fff;
+  display: block;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+  text-transform: uppercase;
+}
+#responsive-menu ul li a i { margin-right: 15px; }
+a#mobile_menu {
+  font-size: 24px;
+  background-color: rgba(13, 181, 192,0.8);
+  border-radius: 30px;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  position: fixed;
+  top: 2px;
+  right: 15px;
+  z-index: 5500;
+}
+.imgsize{
+  height: 240px;
+  width: 360px;
+}
+
+#responsive-menu ul li a:hover {
+  color:#fff;
+  background-color: #0db5c0;
+  text-decoration: none;
+}
+
+/* 3. Home & About Styles
+------------------------------------*/
+#home { padding-top: 145px; }
+.entrepreneur-home-left, .entrepreneur-home-right { height: 400px; }
+.entrepreneur-home-left { padding: 0; }
+.entrepreneur-logo {
+  position: absolute;
+  top: 110px;
+  left: 25px;
+}
+.entrepreneur-site-name, .entrepreneur-slogan {
+	display: block;
+	text-transform: uppercase;
+  height: 300px;
+  width: 300px;
+}
+.entrepreneur-site-name {	font-size: 115px; }
+.entrepreneur-slogan {
+  color: #8e8e8e;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  padding-left: 15px;
+}
+.entrepreneur-home-text { margin-bottom: 20px; }
+.entrepreneur-learn-more {
+  border: 1px solid #0db5c0;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 10px 30px;
+  transition: all 0.3s;
+}
+.entrepreneur-learn-more:hover {
+  background-color: #0db5c0;
+  color: #fff;
+  text-decoration: none;
+}
+.entrepreneur-about-left, .entrepreneur-about-right { height: auto; }
+.entrepreneur-about-right {
+  padding-left: 30px;
+  padding-top: 70px;
+}
+.entrepreneur-about-list {
+  line-height: 2;
+  margin-left: 30px;
+}
+
+/* 4. Products Styles
+--------------------------------------*/
+.entrepreneur-products-left,
+.entrepreneur-products-right {
+  height: 405px;
+}
+.entrepreneur-products-left { padding: 40px 80px 30px 80px; }
+.entrepreneur-products-right {
+  background: #fff;
+  padding: 0;
+  overflow: hidden;
+}
+.entrepreneur-products-link {
+  color: #fff;
+  font-size: 40px;
+  position: absolute;
+  top: 135px;
+  right: 42px;
+  text-align: center;
+}
+.entrepreneur-products-link:hover {
+  color: #202020;
+  text-decoration: none;
+}
+.entrepreneur-products-link .first,
+.entrepreneur-products-link .second,
+.entrepreneur-testimonials-header .first,
+.entrepreneur-testimonials-header .second {
+  display: block;
+}
+
+/* 5. Testimonials Styles
+--------------------------------------*/
+.entrepreneur-testimonials-left,
+.entrepreneur-testimonials-right {
+  height: 372px;
+}
+.entrepreneur-testimonials-left {
+  padding-left: 0;
+  padding-right: 0;
+}
+.entrepreneur-testimonials-right {
+  padding-top: 100px;
+  padding-right: 100px;
+  overflow: hidden;
+}
+.entrepreneur-testimonials-header {
+  color: #fff;
+  position: absolute;
+  top: 125px;
+  left: 40px;
+}
+.entrepreneur-testimonials-header .second { font-weight: 400; }
+.entrepreneur-testimonial-name {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.flexslider {
+  border: none;
+  box-shadow: none;
+}
+.flex-control-paging li a { background: none; }
+.flex-control-paging li a.flex-active { background: #9b9b9b; }
+.fa-quote-left, .fa-quote-right { font-size: 20px; }
+.fa-quote-left { margin-right: 10px; }
+.fa-quote-right { margin-left: 10px; }
+
+/* 6. Contact & Footer Styles
+--------------------------------------*/
+.form-control { border-radius: 30px; }
+textarea.form-control { padding: 15px; }
+.entrepreneur-contact {
+  padding: 60px;
+  padding-bottom: 30px;
+}
+.entrepreneur-send-btn {
+  background: #fe475b;
+  border-radius: 30px;
+  color: white;
+  padding: 5px 30px;
+}
+#map-canvas {
+  border-radius: 50px;
+  height: 350px;
+}
+footer {
+  background: url('../images/red-corner.png') no-repeat right;
+  height: 115px;
+}
+footer .col-lg-12 { padding: 0; }
+.entrepreneur-copyright-text,
+.entrepreneur-copyright-design {
+  margin-top: 75px;
+}
+.entrepreneur-copyright-text {
+  float: left;
+  margin-left: 30px;
+}
+.entrepreneur-copyright-text a { color: #000; }
+.entrepreneur-copyright-design {
+  float: right;
+  margin-right: 30px;
+}
+.entrepreneur-copyright-design,
+.entrepreneur-copyright-design a {
+    color: #fff;
+}
+
+/* 7. Media Queries
+--------------------------------------*/
+@media screen and (max-width: 1199px) {
+  .entrepreneur-nav li>a { padding: 10px 15px; }
+  .entrepreneur-logo {
+    top: 115px;
+    left: 30px;
+  }
+  .entrepreneur-products-link { right: 45px; }
+  .entrepreneur-copyright-text,
+  .entrepreneur-copyright-design {
+    margin-top: 65px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  h3 { margin-bottom: 15px; }
+  .entrepreneur-nav {
+    height: 60px;
+    padding-left: 15px;
+    padding-top: 18px;
+  }
+  .entrepreneur-nav-container .container { background-size: auto 60px; }
+  .entrepreneur-nav li>a { padding: 10px; }
+  .entrepreneur-logo {
+    top: 83px;
+    left: 20px;
+  }
+  #home { padding-top: 60px; }
+  .entrepreneur-home-left,
+  .entrepreneur-home-right {
+    height: 325px;
+  }
+  .entrepreneur-home-right { padding: 40px; }
+  .entrepreneur-home-text { margin-bottom: 10px; }
+  .entrepreneur-site-name { font-size: 100px; }
+  .entrepreneur-slogan {
+    letter-spacing: 6px;
+    padding-left: 10px;
+  }
+  .entrepreneur-about-left,
+  .entrepreneur-products-left,
+  .entrepreneur-services {
+    padding: 40px;
+  }
+  .entrepreneur-about-right {
+    padding-left: 30px;
+    padding-top: 80px;
+  }
+  .entrepreneur-products-left,
+  .entrepreneur-products-right {
+    height: 360px;
+  }
+  .entrepreneur-testimonials-left,
+  .entrepreneur-testimonials-right {
+    height: 300px;
+  }
+  .entrepreneur-products-link,
+  .entrepreneur-testimonials-header {
+    font-size: 30px;
+  }
+  .entrepreneur-products-link {
+    right: 34px;
+    top: 140px;
+  }
+  .entrepreneur-red-btn { margin-top: 30px; }
+  .entrepreneur-red-btn,
+  .entrepreneur-blue-btn {
+    height: 300px;
+  }
+  .entrepreneur-testimonials-right {
+    padding-right: 30px;
+    padding-top: 70px;
+  }
+  .entrepreneur-testimonials-header {
+    top: 90px;
+    left: 21px;
+  }
+  .entrepreneur-contact { padding: 30px; }
+}
+
+@media screen and (max-width: 767px) {
+  h2 { margin-top: 20px; }
+  .entrepreneur-nav-container { position: static; }
+  .entrepreneur-nav-container .container { height: 60px; }
+  #home { padding-top: 0; }
+  .entrepreneur-home-right { padding-bottom: 50px; }
+  .entrepreneur-logo {
+      top: 87px;
+      left: 30px;
+  }
+  .entrepreneur-logo-bg { max-width: 320px; }
+  .entrepreneur-home-right,
+  .entrepreneur-products-left,
+  .entrepreneur-products-right,
+  .entrepreneur-testimonials-left,
+  .entrepreneur-testimonials-right {
+    height: auto;
+  }
+  .entrepreneur-home-left,
+  .entrepreneur-about-left,
+  .entrepreneur-about-right {
+    height: auto;
+  }
+  .entrepreneur-about-right { text-align: center; }
+  .entrepreneur-about-right img {
+    max-width: 402px;
+    width: 100%;
+    height: auto;
+  }
+  .entrepreneur-about-left,
+  .entrepreneur-about-right,
+  .entrepreneur-products-left,
+  .entrepreneur-services {
+    padding: 50px 30px;
+  }
+  .entrepreneur-about-right { padding-top: 0; }
+  .entrepreneur-red-btn { margin-top: 0; }
+  .entrepreneur-products-right { padding-top: 40px; }
+  .entrepreneur-products-link { top: 150px; }
+  .entrepreneur-testimonials-left { padding-bottom: 40px; }
+  .entrepreneur-testimonials-right {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+  }
+  .entrepreneur-contact {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #map-canvas { margin-top: 30px; }
+  .entrepreneur-copyright-container {
+    float: right;
+    max-width: 325px;
+    width: 100%;
+    margin-top: 68px;
+    margin-right: 10px;
+  }
+  .entrepreneur-copyright-text,
+  .entrepreneur-copyright-text a {
+    color: #fff;
+  }
+  .entrepreneur-copyright-text,
+  .entrepreneur-copyright-design {
+    display: block;
+    float: none;
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
